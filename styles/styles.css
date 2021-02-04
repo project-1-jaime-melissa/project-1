@@ -234,10 +234,12 @@ body {
   font-family: "Roboto", sans-serif;
   font-size: 28px;
   letter-spacing: 1px;
+  background-color: #EAFEFC;
 }
 
 h1, h2, h3, h4, button {
   font-family: "IM FELL English", serif;
+  font-style: italic;
 }
 
 h1 {
@@ -272,5 +274,4 @@ nav {
   font-weight: bold;
   line-height: 29px;
   letter-spacing: 1px;
-  /*Center*/
 }
