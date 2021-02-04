@@ -1,0 +1,196 @@
+
+//|||| SUMMARY SECTION ||||
+
+.summary {
+    @include flex-wrap;
+    margin-bottom: 12rem;
+
+    //reduce bottom margin
+        @include tablet-MQ {
+            & {
+                margin-bottom: 4rem;
+            }
+        }
+
+    .text-container {
+        position: relative;
+        width: 50%;
+        margin: 1.5rem 0;
+
+        //drop to single column
+        @include tablet-MQ {
+            & {
+                width: 100%;
+            }
+        }
+    }
+
+    i {
+        background: $color-yellow;
+        padding-top: 0.9rem;
+        border-radius: 50%;
+        position: absolute;
+        top: 0.6rem;
+        left: 0;
+        width: 4rem;
+        height: 4rem;
+        text-align: center;
+    }
+
+    h2 {
+        margin-right: 1.5rem;
+    }
+
+    h2, p {
+        padding-left: 5rem;
+    }
+
+    //remove indent on p tag
+    @include tablet-MQ {
+        p {
+            padding-left: 0;
+        }
+    }
+}
+
+
+//|||| PROGRAMS + LOCATIONS SECTION ||||
+
+.programs-locations {
+    background-color: $color-dark-blue;
+    color: $color-white;
+    margin: 8rem 0;
+
+    //reduce margin, add bottom padding
+    @include tablet-MQ {
+        & {
+            margin: 0;
+            padding-bottom: 4rem;
+        }
+    }
+
+    .programs-container, .locations-container {
+        @include flex-wrap;
+        
+        .img-container img {
+            width: 100%;
+            position: relative;
+
+            //unset image position
+            @include tablet-MQ {
+                & {
+                    width: 100%;
+                    position: unset;
+                }
+            }
+        }
+
+        .text-container {
+            margin: auto auto;
+            // padding-left: 5rem;
+
+            //reduce margin + padding, centre align
+            @include tablet-MQ {
+                & {
+                    margin: auto 0 0;
+                    text-align: center;
+                    padding-left: 0;
+                }
+            }
+        }
+    }
+
+    .img-container, .text-container {
+        width: 50%;
+
+        //drop to single column
+        @include tablet-MQ {
+            & {
+                width: 100%;
+            }
+        }
+    }
+
+    .img-container {
+        @include object-fit;
+
+        //add top margin
+        @include tablet-MQ {
+            & {
+                margin: 5rem auto 2rem;
+                width: 95%;
+            }
+        }
+    }
+
+    .programs-container {
+        .img-container img {
+            top: -15%;
+            left: calc(-100vw * 0.05);
+        }
+
+        .text-container {
+            padding-left: 5rem;
+        }
+    }
+
+    .locations-container {
+        .img-container img {
+            bottom: -15%;
+            right: calc(-100vw * 0.05);
+        }
+
+        .text-container {
+            padding-right: 5rem;
+            text-align: right;
+
+            p {
+                text-align: left;
+            }
+
+            //reduce padding
+            @include tablet-MQ {
+                & {
+                    padding-right: 0;
+                    text-align: center;
+                    order: 1;
+                }
+
+                & p {
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+}
+
+//|||| EXTRA VACATION DAYS SECTION ||||
+
+.vacation-days {
+    margin: 0 auto;
+    text-align: center;
+
+    .text-container {
+        padding: 5rem 10rem 10rem;
+    }
+
+    p {
+        text-align: left;
+    }
+
+    @include tablet-MQ {
+        & p {
+            text-align: center;
+        }
+
+        & .text-container {
+            padding: 4rem 0 4rem;
+        }
+    }
+
+    .img-container {
+        @include object-fit;
+        width: 100%;
+    }
+}

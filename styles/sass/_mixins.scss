@@ -1,0 +1,19 @@
+
+@mixin flex-wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@mixin object-fit {
+    object-fit: cover;
+    object-position: center;
+}
+
+
+//||||| MEDIA QUERIES |||||
+
+@mixin tablet-MQ {
+    @media (max-width: 750px) {
+        @content;
+    }
+}
