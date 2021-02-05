@@ -16,9 +16,10 @@ body {
     font-family: $font-body
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
     text-transform: uppercase;
     font-family: $font-headers;
+    font-style: italic;
 }
 
 h2 {
@@ -31,6 +32,7 @@ h3 {
     letter-spacing: 0.013rem;
     //line-height: 5.8rem
 }
+
 h2, h3 {
     margin: 1.5rem 0;
 
@@ -38,3 +40,23 @@ h2, h3 {
         margin: 1rem 0;
     }
 }
+
+h4 {
+    font-size: 25px;
+    line-height: 58px;
+    letter-spacing: 0.8px;
+}
+
+button {
+    font-size: 2.5rem;
+    line-height: 41.6px;
+}
+
+nav {
+    font-family: $font-body;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 29px;
+    letter-spacing: 1px;
+}
+
