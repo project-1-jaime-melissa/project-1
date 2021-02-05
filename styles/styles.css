@@ -221,19 +221,10 @@ textarea {
   overflow: hidden;
 }
 
-<<<<<<< HEAD
-=======
-/*Colour Palette*/
-/*Ice Blue: #EAFEFC*/
-/*Dandelion: #FDD908*/
-/*Twilight Blue: #0D457F*/
-/*White: #FFFFFF*/
->>>>>>> 6b6a9358b2b4a09aa5d5a11139b780eae31f8a36
 html {
   font-size: 62.5%;
 }
 
-<<<<<<< HEAD
 .wrapper {
   max-width: 1300px;
   width: 95%;
@@ -248,9 +239,10 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
   text-transform: uppercase;
   font-family: "IM Fell English", serif;
+  font-style: italic;
 }
 
 h2 {
@@ -270,6 +262,25 @@ h2, h3 {
   h2, h3 {
     margin: 1rem 0;
   }
+}
+
+h4 {
+  font-size: 25px;
+  line-height: 58px;
+  letter-spacing: 0.8px;
+}
+
+button {
+  font-size: 2.5rem;
+  line-height: 41.6px;
+}
+
+nav {
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 29px;
+  letter-spacing: 1px;
 }
 
 .summary {
@@ -458,50 +469,4 @@ h2, h3 {
   -o-object-position: center;
      object-position: center;
   width: 100%;
-=======
-body {
-  font-family: "Roboto", sans-serif;
-  font-size: 28px;
-  letter-spacing: 1px;
-  background-color: #EAFEFC;
-}
-
-h1, h2, h3, h4, button {
-  font-family: "IM FELL English", serif;
-  font-style: italic;
-}
-
-h1 {
-  font-size: 7.9rem;
-}
-
-h2 {
-  font-size: 4.5rem;
-  line-height: 99.8px;
-}
-
-h3 {
-  font-size: 4.0rem;
-  line-height: 58px;
-  letter-spacing: 1.3px;
-}
-
-h4 {
-  font-size: 25px;
-  line-height: 58px;
-  letter-spacing: 0.8px;
-}
-
-button {
-  font-size: 2.5rem;
-  line-height: 41.6px;
-}
-
-nav {
-  font-family: "Roboto", sans-serif;
-  font-size: 20px;
-  font-weight: bold;
-  line-height: 29px;
-  letter-spacing: 1px;
->>>>>>> 6b6a9358b2b4a09aa5d5a11139b780eae31f8a36
 }
