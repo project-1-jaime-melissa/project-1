@@ -265,9 +265,9 @@ h2, h3 {
 }
 
 h4 {
-  font-size: 25px;
-  line-height: 58px;
-  letter-spacing: 0.8px;
+  font-size: 2.5rem;
+  line-height: 5.8rem;
+  letter-spacing: 0.08rem;
 }
 
 button {
@@ -277,10 +277,14 @@ button {
 
 nav {
   font-family: "Roboto", sans-serif;
-  font-size: 20px;
+  font-size: 2rem;
   font-weight: bold;
-  line-height: 29px;
-  letter-spacing: 1px;
+  line-height: 2.9rem;
+  letter-spacing: 0.01rem;
+}
+
+nav a {
+  color: white;
 }
 
 .summary {
