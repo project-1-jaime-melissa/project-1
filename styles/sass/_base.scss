@@ -4,7 +4,7 @@ html {
 
 .wrapper {
     max-width: 1300px;
-    width: 95%;
+    width: 90%;
     margin: 0 auto;
 }
 
@@ -20,6 +20,10 @@ h1, h2, h3, h4 {
     text-transform: uppercase;
     font-family: $font-headers;
     font-style: italic;
+}
+
+h1 {
+    color: $color-white;
 }
 
 h2 {
@@ -45,6 +49,7 @@ h4 {
     font-size: 2.5rem;
     line-height: 5.8rem;
     letter-spacing: 0.08rem;
+    color: $color-yellow;
 }
 
 button {
@@ -52,14 +57,31 @@ button {
     line-height: 41.6px;
 }
 
+img {
+    width: 100%;
+}
+
+header {
+    padding-top: 50px;
+}
+
 nav {
-    font-family: $font-body;
-    font-size: 2rem;
-    font-weight: bold;
-    line-height: 2.9rem;
-    letter-spacing: 0.01rem;
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: space-evenly;
+    }
 
     a {
+        font-family: $font-body;
+        font-size: 2rem;
+        font-weight: bold;
+        line-height: 2.9rem;
+        letter-spacing: 0.01rem;
+        text-decoration: none;
         color: white;  
     }
 

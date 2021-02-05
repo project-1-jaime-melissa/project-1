@@ -1,0 +1,43 @@
+.blog header {
+    background-image: url("./../assets/blog-header.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+.blog .blog-container {
+    display: flex;
+    
+}
+
+.blog .blog-main-container {
+    width: 65%;
+    border: 3px solid $color-yellow;
+
+    .main-image-container {
+
+    }
+
+    .main-text-container {
+
+    }
+}
+
+.blog .side-bar-container {
+    width: 35%;
+
+    .side-image-container {
+        
+    }
+
+    .side-text-container {
+        background-color: $color-dark-blue;
+        color: $color-white;
+        width: 80%;
+        padding: 20px;
+
+        ul li {
+            list-style: inside;
+        }
+    }
+}
