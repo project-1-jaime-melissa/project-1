@@ -5,36 +5,62 @@
     height: 100vh;
 }
 
-.blog .blog-container {
+.blog main {
     display: flex;
-    
+    flex-direction: row-reverse;
+    margin-bottom: 100px;
 }
 
-.blog .blog-main-container {
+.blog .blog-container {
     width: 65%;
-    border: 3px solid $color-yellow;
+    border-left: 2px solid $color-yellow;
+    border-bottom: 2px solid $color-yellow;
 
-    .main-image-container {
+    .image-container {
+        background: $color-yellow;
 
+        img {
+            position: relative;
+            right: -20px;
+            top: -20px;
+        }
     }
 
-    .main-text-container {
+    .text-container {
+        padding: 50px 50px 50px 100px;
 
+        p {
+            margin-bottom: 20px;
+        }
     }
 }
 
-.blog .side-bar-container {
+.blog aside {
     width: 35%;
+    // padding-left: 80px;
+    margin: 80px;
+    background-color: $color-dark-blue;
+    height: 100%;
 
-    .side-image-container {
-        
+    .image-container {
+        position: relative;
+        left: -60px;
     }
 
-    .side-text-container {
+    .text-container {
         background-color: $color-dark-blue;
         color: $color-white;
         width: 80%;
-        padding: 20px;
+        padding-bottom: 20px;
+        margin: 0 auto;
+
+        h4 {
+            margin-top: 20px;
+        }
+
+        p {
+            padding-bottom: 10px;
+        }
 
         ul li {
             list-style: inside;

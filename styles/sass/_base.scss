@@ -13,7 +13,7 @@ body {
     font-size: 2rem;
     line-height: 2.8rem;
     letter-spacing: 0.01rem;
-    font-family: $font-body
+    font-family: $font-body;
 }
 
 h1, h2, h3, h4 {
@@ -24,6 +24,7 @@ h1, h2, h3, h4 {
 
 h1 {
     color: $color-white;
+    font-size: 7.9rem;
 }
 
 h2 {
@@ -34,7 +35,8 @@ h2 {
 h3 {
     font-size: calc(1rem + 2vw); //4rem
     letter-spacing: 0.013rem;
-    //line-height: 5.8rem
+    line-height: 5.8rem;
+    color: $color-dark-blue;
 }
 
 h2, h3 {
@@ -58,7 +60,7 @@ button {
 }
 
 img {
-    width: 100%;
+    max-width: 100%;
 }
 
 header {

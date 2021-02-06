@@ -247,6 +247,7 @@ h1, h2, h3, h4 {
 
 h1 {
   color: white;
+  font-size: 7.9rem;
 }
 
 h2 {
@@ -256,6 +257,8 @@ h2 {
 h3 {
   font-size: calc(1rem + 2vw);
   letter-spacing: 0.013rem;
+  line-height: 5.8rem;
+  color: #0D457F;
 }
 
 h2, h3 {
@@ -281,7 +284,7 @@ button {
 }
 
 img {
-  width: 100%;
+  max-width: 100%;
 }
 
 header {
@@ -317,28 +320,69 @@ nav a {
   height: 100vh;
 }
 
-.blog .blog-container {
+.blog main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  margin-bottom: 100px;
 }
 
-.blog .blog-main-container {
+.blog .blog-container {
   width: 65%;
-  border: 3px solid #FDD908;
+  border-left: 2px solid #FDD908;
+  border-bottom: 2px solid #FDD908;
 }
 
-.blog .side-bar-container {
+.blog .blog-container .image-container {
+  background: #FDD908;
+}
+
+.blog .blog-container .image-container img {
+  position: relative;
+  right: -20px;
+  top: -20px;
+}
+
+.blog .blog-container .text-container {
+  padding: 50px 50px 50px 100px;
+}
+
+.blog .blog-container .text-container p {
+  margin-bottom: 20px;
+}
+
+.blog aside {
   width: 35%;
+  margin: 80px;
+  background-color: #0D457F;
+  height: 100%;
 }
 
-.blog .side-bar-container .side-text-container {
+.blog aside .image-container {
+  position: relative;
+  left: -60px;
+}
+
+.blog aside .text-container {
   background-color: #0D457F;
   color: white;
   width: 80%;
-  padding: 20px;
+  padding-bottom: 20px;
+  margin: 0 auto;
 }
 
-.blog .side-bar-container .side-text-container ul li {
+.blog aside .text-container h4 {
+  margin-top: 20px;
+}
+
+.blog aside .text-container p {
+  padding-bottom: 10px;
+}
+
+.blog aside .text-container ul li {
   list-style: inside;
 }
