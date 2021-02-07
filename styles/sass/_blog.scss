@@ -7,7 +7,7 @@
 
     main {
         display: flex;
-        flex-wrap: wrap; // *** added wrap
+        flex-wrap: wrap; // *** added wrap (can replace this and above with @include flex-wrap mixin
         // flex-direction: row-reverse; *** commented out given moved position of elements
         justify-content: flex-end; // *** added flex-end
         margin-bottom: 50px;
@@ -23,7 +23,7 @@
 
             img {
                 position: relative;
-                right: $wrapper-margin; // *** created a variable to calculate distance since was doing in home too...except, i don't know why it's working correctly here and not home!
+                @include wrapper-margin(right, 0.05);; // *** created a mixin to calculate distance since was doing in home too.
                 top: -20px;
             }
         }
@@ -46,7 +46,7 @@
 
         .image-container {
             position: relative;
-            left: $wrapper-margin; // *** created a variable to calculate distance since was doing in home too
+            @include wrapper-margin(left, 0.05); // *** created a mixin to calculate distance since was doing in home too
         }
 
         .text-container {

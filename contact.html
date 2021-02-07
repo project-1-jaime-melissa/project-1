@@ -9,11 +9,17 @@
     <!--IM FELL English Font-->
     <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English&display=swap" rel="stylesheet"> 
     <!--Roboto Font-->
-    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@1&family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@1&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- fontawesome link -->
+    <script src='https://kit.fontawesome.com/5e22732c25.js' crossorigin='anonymous'></script>
 </head>
 <body>
     <header>
-        <nav>
+        <nav class="wrapper">
+            <label for="toggle" class="mobile-menu">
+                <i class="fa fa-bars" aria-label="Toggle Menu On and Off"></i>
+            </label>
+            <input type="checkbox" class="sr-only" id="toggle" name="toggle" />
             <ul>
                 <li><a href="/index.html">Home</a></li>
                 <li><a href="#">About</a></li>
@@ -21,7 +27,9 @@
                 <li><a href="/contact.html">Contact</a></li>
             </ul>
         </nav>
-        <h1>Get In Touch</h1>
+        <div class="header-container wrapper">
+            <h1>Get In Touch</h1>
+        </div>
     </header>
 
     <main>
@@ -29,7 +37,7 @@
     </main>
 
     <footer>
-
+        <p>Copyright © 2019 <a href="https://junocollege.com" target="_blank">Juno College</a></p>
     </footer>
 </body>
 </html>
