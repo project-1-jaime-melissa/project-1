@@ -1,69 +1,86 @@
-.blog header {
-    background-image: url("./../assets/blog-header.jpg");
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-}
 
-.blog main {
-    display: flex;
-    flex-direction: row-reverse;
-    margin-bottom: 100px;
-}
+.blog { // *** added .blog wrap
 
-.blog .blog-container {
-    width: 65%;
-    border-left: 2px solid $color-yellow;
-    border-bottom: 2px solid $color-yellow;
+    header {
+        background-image: url("./../assets/blog-header.jpg");
+    }
 
-    .image-container {
-        background: $color-yellow;
+    main {
+        display: flex;
+        flex-wrap: wrap; // *** added wrap
+        // flex-direction: row-reverse; *** commented out given moved position of elements
+        justify-content: flex-end; // *** added flex-end
+        margin-bottom: 50px;
+    }
 
-        img {
-            position: relative;
-            right: -20px;
-            top: -20px;
+    .blog-container {
+        width: 65%;
+        border-left: 2px solid $color-yellow;
+        border-bottom: 2px solid $color-yellow;
+
+        .image-container {
+            background: $color-yellow;
+
+            img {
+                position: relative;
+                right: $wrapper-margin; // *** created a variable to calculate distance since was doing in home too...except, i don't know why it's working correctly here and not home!
+                top: -20px;
+            }
+        }
+
+        .text-container {
+            padding: 50px 0 50px 100px; // *** removed right padding (added wrapper class)
+
+            p {
+                margin-bottom: 20px;
+            }
         }
     }
 
-    .text-container {
-        padding: 50px 50px 50px 100px;
-
-        p {
-            margin-bottom: 20px;
-        }
-    }
-}
-
-.blog aside {
-    width: 35%;
-    // padding-left: 80px;
-    margin: 80px;
-    background-color: $color-dark-blue;
-    height: 100%;
-
-    .image-container {
-        position: relative;
-        left: -60px;
-    }
-
-    .text-container {
+    aside {
+        width: calc(35% - 160px); // *** added calc to account for margin
+        // padding-left: 80px;
+        // margin: 80px; // *** added wrapper class instead
         background-color: $color-dark-blue;
-        color: $color-white;
-        width: 80%;
-        padding-bottom: 20px;
-        margin: 0 auto;
+        height: 100%;
 
-        h4 {
-            margin-top: 20px;
+        .image-container {
+            position: relative;
+            left: $wrapper-margin; // *** created a variable to calculate distance since was doing in home too
         }
 
-        p {
-            padding-bottom: 10px;
-        }
+        .text-container {
+            background-color: $color-dark-blue;
+            color: $color-white;
+            width: 80%;
+            padding-bottom: 20px;
+            margin: 0 auto;
 
-        ul li {
-            list-style: inside;
+            h4 {
+                margin-top: 20px;
+            }
+
+            p {
+                padding-bottom: 10px;
+            }
+
+            ul li {
+                list-style: inside;
+            }
         }
     }
+
+    //*** added below to line up with blog container
+    .comments-container {
+        width: 65%;
+        padding: 50px 0 50px 100px;
+    }
+
+    //*** added below...but think it needs to wrap sooner or maybe we can reduce padding at a larger breakpoint and then drop to one column around tablet size?
+    @include tablet-MQ {
+        .blog-container, .comments-container, aside {
+            width: 100%;
+        }
+    }
+
 }

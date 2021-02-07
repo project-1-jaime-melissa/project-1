@@ -9,11 +9,65 @@
     object-position: center;
 }
 
+//shadow boxes
+@mixin box-shadow-right {
+    box-shadow: 25px 25px 0px 0px $color-yellow;
+}
 
-//||||| MEDIA QUERIES |||||
+@mixin box-shadow-right-small {
+    box-shadow: 12px 12px 0px 0px $color-yellow;
+}
 
+@mixin box-shadow-left {
+    box-shadow: -25px 25px 0px 0px $color-yellow;
+}
+
+@mixin box-shadow-left-small {
+    box-shadow: -12px 12px 0px 0px $color-yellow;
+}
+
+//calculate font size & line-height, courtesy of (with modifications): https://css-tricks.com/snippets/css/fluid-typography/
+@function strip-unit($value) {
+    @return $value / ($value * 0 + 1);
+}
+
+@mixin fluid-font-size($min-font-size, $max-font-size, $min-vw: 300px, $max-vw: 1600px) {
+    
+    $u1: unit($min-font-size);
+    $u2: unit($max-font-size);
+    $u3: unit($min-vw);
+    $u4: unit($max-vw);
+
+    //convert to rems
+    $min-font-size: ($min-font-size * 10);
+    $max-font-size: ($max-font-size * 10);
+
+    @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+        & {
+        font-size: $min-font-size;
+        line-height: calc(#{$min-font-size} + 5px);
+        @media screen and (min-width: $min-vw) {
+            $fluid-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+            font-size: $fluid-size;
+            line-height: calc(#{$fluid-size} + 5px);
+        }
+        @media screen and (min-width: $max-vw) {
+            font-size: $max-font-size;
+            line-height: calc(#{$max-font-size} + 5px);
+        }
+        }
+    }
+}
+
+//media queries
 @mixin tablet-MQ {
-    @media (max-width: 750px) {
+    @media (max-width: 780px) {
+        @content;
+    }
+}
+
+@mixin phone-MQ {
+    @media (max-width: 400px) {
         @content;
     }
 }

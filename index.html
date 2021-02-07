@@ -10,13 +10,15 @@
     <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English&display=swap" rel="stylesheet"> 
     <!--Roboto Font-->
     <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@1&family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
+    <!-- fontawesome link -->
+    <script src='https://kit.fontawesome.com/5e22732c25.js' crossorigin='anonymous'></script>
 
     <title>Boat Ride Adventures</title>
 </head>
 
-<body>
+<body class="home">
     <header>
-        <nav>
+        <nav class="wrapper">
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About</a></li>
@@ -24,7 +26,12 @@
                 <li><a href="/contact.html">Contact</a></li>
             </ul>
         </nav>
-        <h1>Boat Ride Adventures</h1>
+        <div class="header-container wrapper">
+            <h1 >Boat Ride Adventures</h1>
+            <div class="image-container">
+                <img src="./assets/home-box-header.png" alt="">
+            </div>
+        </div>
     </header>
 
     <main>
@@ -59,7 +66,7 @@
         <!-- programs + locations section -->
         <section class="programs-locations">
             <div class="programs-container wrapper">
-                <div class="img-container">
+                <div class="image-container">
                     <img src="./assets/left-image.jpg" alt="Yacht on the ocean, under a cloudy sky.">
                 </div>
                 <div class="text-container">
@@ -75,7 +82,7 @@
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi beatae doloribus cum delectus dignissimos ut!</p>
                     <a href="#" class="button">Read More</a>
                 </div>
-                <div class="img-container">
+                <div class="image-container">
                     <img src="./assets/right-image.jpg" alt="Birds eye view of bow of wooden boat on ocean.">
                 </div>
             </div>
@@ -84,18 +91,18 @@
         <!-- extra vacation days section -->
         <section class="vacation-days">
             <div class="text-container wrapper">
-                <h2>Extra Vacation Days?</h2>
+                <h3>Extra Vacation Days?</h3>
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae, veniam et culpa consectetur error ipsum officia harum fuga, cumque soluta aperiam itaque numquam. Sed illo aliquid ipsum deleniti repellat repellendus. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, doloremque. Lorem ipsum dolor sit amet.</p>
                 <a href="#" class="button">Find Out More</a>
             </div>
-            <div class="img-container">
+            <div class="image-container">
                 <img src="./assets/banner.jpg" alt="Several wooden row boats on a lake surounded by mountains.">
             </div>
         </section>
 
         <!-- win trip section -->
-        <section class="contest">
-            <div class="img-container">
+        <section class="contest wrapper">
+            <div class="image-container">
                 <img src="./assets/small-box.jpg" alt="Back of Woman wearing a cowboy hat staring out at glaciers.">
             </div>
             <div class="text-container">
@@ -108,13 +115,17 @@
 
         <!-- image gallery section -->
         <section class="gallery">
-
+            <ul class="image-container wrapper">
+                <li><img src="./assets/gallery-image-1.jpg" alt=""></li>
+                <li><img src="./assets/gallery-image-2.jpg" alt=""></li>
+                <li><img src="./assets/gallery-image-3.jpg" alt=""></li>
+            </ul>
         </section>
 
     </main>
 </body>
 
 <footer>
-
+    <p>Copyright © 2019 <a href="https://junocollege.com" target="_blank">HackerYou</a></p> 
 </footer>
 </html>
