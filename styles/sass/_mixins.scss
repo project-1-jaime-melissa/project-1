@@ -69,8 +69,20 @@
 }
 
 //media queries
+@mixin laptop-MQ {
+    @media (max-width: 992px) {
+        @content;
+    }
+}
+
 @mixin tablet-MQ {
     @media (max-width: 800px) {
+        @content;
+    }
+}
+
+@mixin small-phone-MQ {
+    @media (max-width: 600px) {
         @content;
     }
 }

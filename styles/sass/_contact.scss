@@ -1,66 +1,118 @@
 .contact {
+    /*Header*/
     header {
         background-image: url(./../assets/contact-header.jpg);
-    }
 
-    main {
-        display: flex;
-    }
-
-    aside {
-        width: 35%;
-        margin-top: 10%;
-        padding-left: 4%;
-
-        .social-media  {
-            width: 30%;
-            margin-bottom: 1%;
-            ul {
-                display: flex;
-                justify-content: space-between;
-                a {
-                    color: $color-dark-blue;
-                }
-            }
-         }
-
-         .text-container {
-            margin-top: 5%;
-         }
-    }    
-
-    .form-container {
-        width: 65%;
-        z-index: 1;
-
-        background-color: $color-yellow;
-        margin-top: -100px;
-        margin-bottom: 10%;
-
-        form {
-            background-color: $color-dark-blue;
-            padding: 80px 20px 20px 20px;
-            
-            position: relative;
-            top: -20px;
-            left: -20px;
-
-            .form-group {
-                input[type=text],
-                textarea {
-                    background-color: $color-dark-blue;
-                    color:#FFFFFF;
-                }
-
-                input[type=submit] {
-                    background-color: $color-yellow;
-                    color: $color-dark-blue;
-                }
-            }
+        .header-container {
+            height: 90%; 
+            display: flex;
+            align-items: center;
         }
     }
 
+    /*Main*/
+    main {
+        display: flex;
+        @include tablet-MQ {
+            & {
+                flex-direction: column;
+                main :nth-child(1) {
+                    order: 2;
+                } 
+            }
+        }
     
+
+        /*Aside*/
+        aside {
+            width: 35%;
+            margin-top: 10%;
+            padding-left: 4%;
+
+            @include laptop-MQ {
+                & {
+                    padding-left: 0;
+                }
+            }
+
+            @include tablet-MQ {
+                & {
+                    margin: 0;
+                    width: 100%;
+                    order: 2;
+                }
+            }
+
+            .social-media  {
+                width: 30%;
+                margin-bottom: 1%;
+
+                @include tablet-MQ {
+                    & {
+                        width: 50%;
+                        font-size: 2.4rem;
+                    }
+                }
+
+                ul {
+                    display: flex;
+                    justify-content: space-between;
+                    
+                    @include tablet-MQ {
+                        & {
+                           justify-content: space-evenly;
+                        }
+                    }
+
+                    a {
+                        color: $color-dark-blue;
+                    }
+                }
+            }
+
+            .text-container {
+                margin-top: 5%;
+            }
+        }    
+
+        .form-container {
+            width: 65%;
+            z-index: 1;
+
+            background-color: $color-yellow;
+            margin-top: -100px;
+            margin-bottom: 10%;
+
+            @include tablet-MQ {
+                & {
+                    width: 100%;
+                }
+            }
+
+            form {
+                background-color: $color-dark-blue;
+                padding: 80px 20px 20px 20px;
+                
+                position: relative;
+                top: -20px;
+                left: -20px;
+
+                .form-group {
+                    input[type=text],
+                    textarea {
+                        background-color: $color-dark-blue;
+                        color:#FFFFFF;
+                    }
+
+                    input[type=submit] {
+                        background-color: $color-yellow;
+                        color: $color-dark-blue;
+                    }
+                }
+            }
+        }
+
+    }
 
     
 }
