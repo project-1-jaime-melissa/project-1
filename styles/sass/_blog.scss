@@ -1,35 +1,44 @@
-
-.blog { // *** added .blog wrap
-
+.blog { 
+    
     header {
         background-image: url("./../assets/blog-header.jpg");
+
+        .header-container {
+            height: 90%; 
+            display:flex;
+            align-items: center;
+        }
     }
 
     main {
         display: flex;
         flex-wrap: wrap; // *** added wrap (can replace this and above with @include flex-wrap mixin
-        // flex-direction: row-reverse; *** commented out given moved position of elements
-        justify-content: flex-end; // *** added flex-end
-        margin-bottom: 50px;
+        justify-content: flex-end; 
+        
     }
 
     .blog-container {
         width: 65%;
-        border-left: 2px solid $color-yellow;
-        border-bottom: 2px solid $color-yellow;
+        
+        position: relative;
+        margin-top: -100px;
+        
 
         .image-container {
             background: $color-yellow;
 
             img {
                 position: relative;
-                @include wrapper-margin(right, 0.05);; // *** created a mixin to calculate distance since was doing in home too.
                 top: -20px;
+                right: -20px;
+                // @include wrapper-margin(right, 0.03);
             }
         }
 
         .text-container {
-            padding: 50px 0 50px 100px; // *** removed right padding (added wrapper class)
+            padding: 50px 75px 50px 100px;
+            border-left: 2px solid $color-yellow;
+        border-bottom: 2px solid $color-yellow;
 
             p {
                 margin-bottom: 20px;
@@ -38,22 +47,24 @@
     }
 
     aside {
-        width: calc(35% - 160px); // *** added calc to account for margin
-        // padding-left: 80px;
-        // margin: 80px; // *** added wrapper class instead
+        width: calc(35% - 160px); 
         background-color: $color-dark-blue;
         height: 100%;
+        position: relative;
+        top: 100px;
 
         .image-container {
             position: relative;
-            @include wrapper-margin(left, 0.05); // *** created a mixin to calculate distance since was doing in home too
+            @include wrapper-margin(left, 0.08);
+            width: 130%; /*Is there a better way to do this*/
+            top: -20px;
         }
 
         .text-container {
             background-color: $color-dark-blue;
             color: $color-white;
             width: 80%;
-            padding-bottom: 20px;
+            padding-bottom: 8%;
             margin: 0 auto;
 
             h4 {
@@ -61,7 +72,7 @@
             }
 
             p {
-                padding-bottom: 10px;
+                padding-bottom: 4%;
             }
 
             ul li {
@@ -70,10 +81,48 @@
         }
     }
 
-    //*** added below to line up with blog container
     .comments-container {
         width: 65%;
-        padding: 50px 0 50px 100px;
+        padding: 50px 75px 50px 100px;
+        
+        .comments {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 350px;
+        }
+    
+        .comment-container {
+            display: flex;
+
+            .text-container {
+                padding: 0 4%;
+            }
+
+            .image-container {
+                width: 50%;
+            }
+        }
+    }
+
+    form {
+
+        margin-top: 80px;
+
+        .form-group {
+            input[type=text],
+            textarea {
+                background-color: $color-light-blue;
+                color: #000000;
+            }
+
+            input[type=submit] {
+                background-color: $color-dark-blue;
+                color: $color-yellow;
+            }
+        }
+
+
     }
 
     //*** added below...but think it needs to wrap sooner or maybe we can reduce padding at a larger breakpoint and then drop to one column around tablet size?

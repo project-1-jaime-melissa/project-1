@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,13 +8,15 @@
     <!-- stylesheet link -->
     <link rel="stylesheet" href="./styles/styles.css">
     <!--IM FELL English Font-->
-    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English&display=swap" rel="stylesheet">
     <!--Roboto Font-->
-    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@1&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@1&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
     <!-- fontawesome link -->
     <script src='https://kit.fontawesome.com/5e22732c25.js' crossorigin='anonymous'></script>
 </head>
-<body>
+
+<body class="contact">
     <header>
         <nav class="wrapper">
             <label for="toggle" class="mobile-menu">
@@ -32,12 +35,48 @@
         </div>
     </header>
 
-    <main>
-        
+    <main class="wrapper">
+        <aside class="">
+            <div class="social-media"> 
+                <ul>  
+                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fab fa-whatsapp"></i></a></li>
+                </ul>
+              </div>  
+              <p>info@email.com</p>
+              <div class="text-container">
+                  <p>123 - 456 - 7890</p>
+                  <p>123 Queen Street West, Unit 10</p>
+                  <p>Toronto, Ontario</p>
+                  <p>M5V2D5</p>
+              </div>
+        </aside>
+
+        <section class="form-container">
+            <form action="">
+                <fieldset>
+                    <div class="form-group">
+                        <label for="name" class="visuallyHidden">Name</label>
+                        <input type="text" name="name" id="name" placeholder="Name">
+                        <label for="email" class="visuallyHidden">Email</label>
+                        <input type="text" placeholder="Email" id="email">
+                    </div>
+                    <div class="form-group">
+                        <textarea name="comment" rows="5" id="comment" placeholder="Comment"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Submit">
+                    </div>
+                </fieldset>
+            </form>
+        </section>
     </main>
 
     <footer>
         <p>Copyright © 2019 <a href="https://junocollege.com" target="_blank">Juno College</a></p>
     </footer>
 </body>
+
 </html>
