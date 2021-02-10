@@ -51,6 +51,7 @@
                     & {
                         width: 50%;
                         font-size: 2.4rem;
+                        margin: 0 auto;
                     }
                 }
 
@@ -72,6 +73,22 @@
 
             .text-container {
                 margin-top: 5%;
+                p:nth-child(1) {
+                    margin-bottom: 5%;
+                }
+
+                @include tablet-MQ {
+                    @include flex-wrap;
+                    flex-direction: column;
+                    align-items: center;
+                    margin-bottom: 5%;
+
+                    p:nth-child(1) {
+                        margin-bottom: 0;
+                    }
+
+
+                }
             }
         }    
 
@@ -86,8 +103,11 @@
             @include tablet-MQ {
                 & {
                     width: 100%;
+                    margin-top: 10%;
                 }
             }
+
+            
 
             form {
                 background-color: $color-dark-blue;
@@ -97,11 +117,27 @@
                 top: -20px;
                 left: -20px;
 
+                @include tablet-MQ {
+                    & {
+                       position: initial;
+                    }
+                } 
+
+
                 .form-group {
+
+                    @include small-phone-MQ {
+                        & {
+                            display: block;
+                        }
+                    }
+                    
                     input[type=text],
                     textarea {
                         background-color: $color-dark-blue;
                         color:#FFFFFF;
+
+                        
                     }
 
                     input[type=submit] {

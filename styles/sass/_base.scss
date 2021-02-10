@@ -137,7 +137,7 @@ nav {
     }
     
     /* mobile navigation */
-    @include phone-MQ {
+    @include small-phone-MQ {
         & ul {
             flex-direction: column;
             justify-content: flex-start;

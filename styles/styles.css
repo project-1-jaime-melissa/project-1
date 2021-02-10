@@ -474,7 +474,7 @@ nav .fa-bars {
   margin-left: auto;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 600px) {
   nav {
     /* hamburger menu */
   }
@@ -653,7 +653,7 @@ footer a {
   }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 600px) {
   .home header h1 {
     width: 100%;
   }
@@ -1002,7 +1002,7 @@ footer a {
   }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 600px) {
   .home .gallery li {
     width: 100%;
   }
@@ -1067,8 +1067,6 @@ footer a {
   width: calc(35% - 160px);
   background-color: #0D457F;
   height: 100%;
-  position: relative;
-  top: 100px;
 }
 
 .blog aside .image-container {
@@ -1147,12 +1145,6 @@ footer a {
   color: #FDD908;
 }
 
-@media (max-width: 800px) {
-  .blog .blog-container, .blog .comments-container, .blog aside {
-    width: 100%;
-  }
-}
-
 .contact {
   /*Header*/
   /*Main*/
@@ -1224,6 +1216,7 @@ footer a {
   .contact main aside .social-media {
     width: 50%;
     font-size: 2.4rem;
+    margin: 0 auto;
   }
 }
 
@@ -1252,6 +1245,31 @@ footer a {
   margin-top: 5%;
 }
 
+.contact main aside .text-container p:nth-child(1) {
+  margin-bottom: 5%;
+}
+
+@media (max-width: 800px) {
+  .contact main aside .text-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 5%;
+  }
+  .contact main aside .text-container p:nth-child(1) {
+    margin-bottom: 0;
+  }
+}
+
 .contact main .form-container {
   width: 65%;
   z-index: 1;
@@ -1263,6 +1281,7 @@ footer a {
 @media (max-width: 800px) {
   .contact main .form-container {
     width: 100%;
+    margin-top: 10%;
   }
 }
 
@@ -1272,6 +1291,18 @@ footer a {
   position: relative;
   top: -20px;
   left: -20px;
+}
+
+@media (max-width: 800px) {
+  .contact main .form-container form {
+    position: initial;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact main .form-container form .form-group {
+    display: block;
+  }
 }
 
 .contact main .form-container form .form-group input[type=text],
