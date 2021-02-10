@@ -236,6 +236,7 @@ body {
   letter-spacing: 0.01rem;
   font-family: "Roboto", sans-serif;
   height: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -447,6 +448,9 @@ nav a {
   line-height: 2.9rem;
   letter-spacing: 0.01rem;
   color: white;
+}
+
+nav a {
   position: relative;
 }
 
@@ -531,8 +535,8 @@ nav .fa-bars {
   color: #0D457F;
   padding: 1rem;
   border: solid #FDD908 4px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
 }
 
 .button:hover, .button:focus {
@@ -627,7 +631,7 @@ footer {
 }
 
 footer p {
-  padding: 20px 0;
+  padding: 21px 0;
   text-align: center;
   color: #0D457F;
 }
@@ -636,13 +640,34 @@ footer a {
   color: inherit;
 }
 
+footer a {
+  position: relative;
+}
+
+footer a:after {
+  content: '';
+  height: 2px;
+  position: absolute;
+  bottom: -5px;
+  background: #0D457F;
+  width: 0;
+  left: 50%;
+  -webkit-transition: width 0.3s, left 0.3s;
+  transition: width 0.3s, left 0.3s;
+}
+
+footer span:hover a:after, footer span:focus a:after {
+  width: 100%;
+  left: 0;
+}
+
 .home header {
   background-image: url(./../assets/home-header.jpg);
 }
 
 .home header h1 {
   color: #FDD908;
-  margin-top: 35vh;
+  margin-top: 55vh;
 }
 
 @media (max-width: 800px) {
@@ -699,11 +724,11 @@ footer a {
   width: 100%;
 }
 
-.home p {
+.home main p {
   margin-bottom: 40px;
 }
 
-.home .summary {
+.home .summary ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -713,30 +738,20 @@ footer a {
   margin-bottom: 100px;
 }
 
-.home .summary p {
-  margin-bottom: 10px;
-}
-
 @media (max-width: 800px) {
-  .home .summary {
-    margin-top: 40px;
-    margin-bottom: 40px;
+  .home .summary ul {
+    margin-top: 30px;
+    margin-bottom: 30px;
   }
 }
 
-.home .summary .text-container {
+.home .summary li {
   position: relative;
   width: 50%;
   margin: 1.5rem 0;
 }
 
-@media (max-width: 800px) {
-  .home .summary .text-container {
-    width: 100%;
-  }
-}
-
-.home .summary i {
+.home .summary li i {
   background: #FDD908;
   padding-top: 0.9rem;
   border-radius: 50%;
@@ -748,12 +763,26 @@ footer a {
   text-align: center;
 }
 
-.home .summary h2 {
+.home .summary li h2 {
   margin-right: 15px;
 }
 
-.home .summary h2, .home .summary p {
+.home .summary li h2, .home .summary li p {
   padding-left: 50px;
+}
+
+.home .summary li p {
+  margin-bottom: 10px;
+}
+
+@media (max-width: 800px) {
+  .home .summary li {
+    width: 100%;
+  }
+  .home .summary li p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
 }
 
 .home .programs-locations {
@@ -825,7 +854,7 @@ footer a {
 }
 
 .home .programs-locations .programs-container .image-container {
-  top: -15%;
+  top: -30px;
   left: calc(-100vw * 0.08);
 }
 
@@ -852,7 +881,7 @@ footer a {
 }
 
 .home .programs-locations .locations-container .image-container {
-  bottom: -15%;
+  bottom: -30px;
   right: calc(-100vw * 0.08);
 }
 

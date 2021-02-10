@@ -14,6 +14,7 @@ body {
     letter-spacing: 0.01rem;
     font-family: $font-body;
     height: 100%;
+    overflow-x: hidden;
 }
 
 header {
@@ -108,25 +109,10 @@ nav {
         line-height: 2.9rem;
         letter-spacing: 0.01rem;
         color: white;
-        position: relative;
     }
 
     //animated underline on hover
-    a:after {
-        content: '';
-        height: 2px;
-        position: absolute;
-        bottom: -5px;
-        background: $color-yellow; 
-        width: 0;
-        left: 50%;
-        transition: width 0.3s, left 0.3s;
-    }
-    
-    li:hover a:after, li:focus a:after {
-        width: 100%;
-        left: 0;
-    }
+    @include animated-underline($color-yellow);
 
     /* hamburger menu */
     .fa-bars {
@@ -189,7 +175,7 @@ nav {
     color: $color-dark-blue;
     padding: 1rem;
     border: solid $color-yellow 4px;
-    transition: all 0.3s;
+    transition: background-color 0.3s;
 }
 
 .button:hover, .button:focus {
@@ -206,10 +192,10 @@ form {
     ::placeholder, /* Chrome, Firefox, Opera, Safari 10.1+ */
     :-ms-input-placeholder, /* Internet Explorer 10-11 */
     ::-ms-input-placeholder /* Microsoft Edge */ { 
-    color: black;
+        color: black;
     }
     ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-    opacity: 1; /* Firefox */
+        opacity: 1; /* Firefox */
     }
 
     .form-group {
@@ -242,14 +228,12 @@ form {
             height: 50px;
         }
     }
-      
-      
 }
 
 footer {
     background-color: $color-yellow;
     p {
-        padding: 20px 0;
+        padding: 21px 0;
         text-align: center;
         color: $color-dark-blue
     }
@@ -257,4 +241,7 @@ footer {
     a {
         color: inherit;
     }
+
+    //animated underline on hover
+    @include animated-underline($color-dark-blue, 'span');
 }
