@@ -16,7 +16,7 @@
                 }
             }
 
-            @include phone-MQ {
+            @include small-phone-MQ {
                 & {
                     width: 100%;
                 }
@@ -371,7 +371,7 @@
         }
 
         //wrap images to one column
-        @include phone-MQ {
+        @include small-phone-MQ {
             li {
                 width: 100%;
             }

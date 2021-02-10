@@ -123,7 +123,7 @@ nav {
     }
     
     /* mobile navigation */
-    @include phone-MQ {
+    @include small-phone-MQ {
         & ul {
             flex-direction: column;
             justify-content: flex-start;
@@ -169,17 +169,12 @@ nav {
     
 }
 
-.button {
-    font-size: fluid-font-size(1.8px, 2.5px);
-    background-color: $color-yellow;
-    color: $color-dark-blue;
-    padding: 1rem;
-    border: solid $color-yellow 4px;
-    transition: background-color 0.3s;
+.home, .contact {
+    @include button-format($color-yellow, $color-dark-blue);
 }
 
-.button:hover, .button:focus {
-    background-color: $color-white;
+.blog {
+    @include button-format($color-dark-blue, $color-yellow);
 }
 
 form {

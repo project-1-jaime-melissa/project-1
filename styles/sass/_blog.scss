@@ -116,10 +116,11 @@
                 color: #000000;
             }
 
-            input[type=submit] {
-                background-color: $color-dark-blue;
-                color: $color-yellow;
-            }
+            //**** added button format mixin
+            // input[type=submit] {
+            //     background-color: $color-dark-blue;
+            //     color: $color-yellow;
+            // }
         }
 
 

@@ -56,7 +56,22 @@
         width: 100%;
         left: 0;
     }
+}
 
+//button formatting 
+@mixin button-format($background-color, $font-color) {
+    .button {
+        font-size: fluid-font-size(1.8px, 2.5px);
+        background-color: $background-color;
+        color: $font-color;
+        padding: 1.2rem;
+        border: none;
+        transition: background-color 0.3s
+    }
+
+    .button:hover, .button:focus {
+        background-color: darken($background-color, 5%)
+    }
 }
 
 //calculate font size & line-height, courtesy of (with modifications): https://css-tricks.com/snippets/css/fluid-typography/
@@ -79,12 +94,12 @@
         & {
         font-size: $min-font-size;
         line-height: calc(#{$min-font-size} + 5px);
-        @media screen and (min-width: $min-vw) {
+        @media (min-width: $min-vw) {
             $fluid-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
             font-size: $fluid-size;
             line-height: calc(#{$fluid-size} + 5px);
         }
-        @media screen and (min-width: $max-vw) {
+        @media (min-width: $max-vw) {
             font-size: $max-font-size;
             line-height: calc(#{$max-font-size} + 5px);
         }
@@ -105,13 +120,13 @@
     }
 }
 
-@mixin small-phone-MQ {
+@mixin large-phone-MQ {
     @media (max-width: 600px) {
         @content;
     }
 }
 
-@mixin phone-MQ {
+@mixin small-phone-MQ {
     @media (max-width: 450px) {
         @content;
     }

@@ -60,7 +60,7 @@
                     
                     @include tablet-MQ {
                         & {
-                           justify-content: space-evenly;
+                            justify-content: space-evenly;
                         }
                     }
 
@@ -104,10 +104,11 @@
                         color:#FFFFFF;
                     }
 
-                    input[type=submit] {
-                        background-color: $color-yellow;
-                        color: $color-dark-blue;
-                    }
+                    //**** added button format mixin
+                    // input[type=submit] {
+                    //     background-color: $color-yellow;
+                    //     color: $color-dark-blue;
+                    // }
                 }
             }
         }

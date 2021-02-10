@@ -244,14 +244,14 @@ body {
   line-height: calc(16px + 5px);
 }
 
-@media screen and (min-width: 300px) {
+@media (min-width: 300px) {
   body {
     font-size: calc(16px + 4 * ((100vw - 300px) / 1300));
     line-height: calc(calc(16px + 4 * ((100vw - 300px) / 1300)) + 5px);
   }
 }
 
-@media screen and (min-width: 1600px) {
+@media (min-width: 1600px) {
   body {
     font-size: 20px;
     line-height: calc(20px + 5px);
@@ -289,14 +289,14 @@ h1 {
   line-height: calc(39.5px + 5px);
 }
 
-@media screen and (min-width: 300px) {
+@media (min-width: 300px) {
   h1 {
     font-size: calc(39.5px + 39.5 * ((100vw - 300px) / 1300));
     line-height: calc(calc(39.5px + 39.5 * ((100vw - 300px) / 1300)) + 5px);
   }
 }
 
-@media screen and (min-width: 1600px) {
+@media (min-width: 1600px) {
   h1 {
     font-size: 79px;
     line-height: calc(79px + 5px);
@@ -308,14 +308,14 @@ h2 {
   line-height: calc(22.5px + 5px);
 }
 
-@media screen and (min-width: 300px) {
+@media (min-width: 300px) {
   h2 {
     font-size: calc(22.5px + 22.5 * ((100vw - 300px) / 1300));
     line-height: calc(calc(22.5px + 22.5 * ((100vw - 300px) / 1300)) + 5px);
   }
 }
 
-@media screen and (min-width: 1600px) {
+@media (min-width: 1600px) {
   h2 {
     font-size: 45px;
     line-height: calc(45px + 5px);
@@ -333,14 +333,14 @@ h3 {
   line-height: calc(20px + 5px);
 }
 
-@media screen and (min-width: 300px) {
+@media (min-width: 300px) {
   h3 {
     font-size: calc(20px + 20 * ((100vw - 300px) / 1300));
     line-height: calc(calc(20px + 20 * ((100vw - 300px) / 1300)) + 5px);
   }
 }
 
-@media screen and (min-width: 1600px) {
+@media (min-width: 1600px) {
   h3 {
     font-size: 40px;
     line-height: calc(40px + 5px);
@@ -367,14 +367,14 @@ h4 {
   line-height: calc(18px + 5px);
 }
 
-@media screen and (min-width: 300px) {
+@media (min-width: 300px) {
   h4 {
     font-size: calc(18px + 7 * ((100vw - 300px) / 1300));
     line-height: calc(calc(18px + 7 * ((100vw - 300px) / 1300)) + 5px);
   }
 }
 
-@media screen and (min-width: 1600px) {
+@media (min-width: 1600px) {
   h4 {
     font-size: 25px;
     line-height: calc(25px + 5px);
@@ -393,14 +393,14 @@ h5 {
   line-height: calc(16px + 5px);
 }
 
-@media screen and (min-width: 300px) {
+@media (min-width: 300px) {
   h5 {
     font-size: calc(16px + 4 * ((100vw - 300px) / 1300));
     line-height: calc(calc(16px + 4 * ((100vw - 300px) / 1300)) + 5px);
   }
 }
 
-@media screen and (min-width: 1600px) {
+@media (min-width: 1600px) {
   h5 {
     font-size: 20px;
     line-height: calc(20px + 5px);
@@ -529,18 +529,32 @@ nav .fa-bars {
   }
 }
 
-.button {
+.home .button, .contact .button {
   font-size: fluid-font-size(1.8px, 2.5px);
   background-color: #FDD908;
   color: #0D457F;
-  padding: 1rem;
-  border: solid #FDD908 4px;
+  padding: 1.2rem;
+  border: none;
   -webkit-transition: background-color 0.3s;
   transition: background-color 0.3s;
 }
 
-.button:hover, .button:focus {
-  background-color: white;
+.home .button:hover, .home .button:focus, .contact .button:hover, .contact .button:focus {
+  background-color: #eac802;
+}
+
+.blog .button {
+  font-size: fluid-font-size(1.8px, 2.5px);
+  background-color: #0D457F;
+  color: #FDD908;
+  padding: 1.2rem;
+  border: none;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+
+.blog .button:hover, .blog .button:focus {
+  background-color: #0b3868;
 }
 
 form input[type=text],
@@ -1171,11 +1185,6 @@ footer span:hover a:after, footer span:focus a:after {
   color: #000000;
 }
 
-.blog form .form-group input[type=submit] {
-  background-color: #0D457F;
-  color: #FDD908;
-}
-
 @media (max-width: 800px) {
   .blog .blog-container, .blog .comments-container, .blog aside {
     width: 100%;
@@ -1307,9 +1316,4 @@ footer span:hover a:after, footer span:focus a:after {
 .contact main .form-container form .form-group textarea {
   background-color: #0D457F;
   color: #FFFFFF;
-}
-
-.contact main .form-container form .form-group input[type=submit] {
-  background-color: #FDD908;
-  color: #0D457F;
 }
