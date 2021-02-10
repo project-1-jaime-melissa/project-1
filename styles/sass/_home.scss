@@ -191,6 +191,7 @@
         }
 
         .programs-container {
+
             .image-container {
                 top: -30px;
                 @include wrapper-margin(left, 0.08);
@@ -210,18 +211,25 @@
                 padding-left: 100px;
             
                 //reduce padding
+                @include laptop-MQ {
+                    & {
+                        padding-left: 50px;
+                    }
+                }
+
                 @include tablet-MQ {
                     & {
                         padding-left: 0;
                     }
                 }
             }
-            
         }
 
         .locations-container {
+            padding-bottom: 30px;
+
             .image-container {
-                bottom: -30px;
+                bottom: -50px;
                 @include wrapper-margin(right, 0.08);
             }
             
@@ -244,6 +252,12 @@
                 }
 
                 //reduce padding
+                @include laptop-MQ {
+                    & {
+                        padding-right: 50px;
+                    }
+                }
+
                 @include tablet-MQ {
                     & {
                         padding-right: 0;
@@ -257,7 +271,6 @@
                 }
             }
         }
-
     }
 
     //|||| EXTRA VACATION DAYS SECTION ||||
@@ -274,13 +287,20 @@
             margin-bottom: 30px;
         }
 
+        //reduce padding
+        @include laptop-MQ {
+            & .text-container {
+                padding: 0 0 60px;
+            }
+        }
+
         @include tablet-MQ {
             & p {
                 text-align: center;
             }
 
             & .text-container {
-                padding: 20px 0 40px;
+                padding: 30px 0 60px;
             }
         }
 
@@ -307,11 +327,11 @@
         .text-container {
             width: 65%;
             height: 100%;
-            padding-left: 5%;
+            padding: 30px 0 40px 30px;
             margin: 0 auto;
         }
 
-        //wrap to single column, hide image
+        //wrap to single column, hide image, adjust padding
         @include tablet-MQ {
             .text-container {
                 width: 100%;
@@ -319,8 +339,7 @@
             
             .text-container {
                 text-align: center;
-                padding: 0;
-                padding-top: 20px;
+                padding: 30px 0 10px;
             }
 
             .image-container {
@@ -333,7 +352,7 @@
     .gallery {
         background-color: $color-dark-blue;
         margin-top: 20px;
-        padding: 35px 0;
+        padding: 50px 0;
 
         @include tablet-MQ {
             & {
