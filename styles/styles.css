@@ -557,8 +557,7 @@ nav .fa-bars {
   background-color: #0b3868;
 }
 
-form input[type=text],
-form textarea {
+form input[type=text], form textarea {
   font-family: "Roboto", sans-serif;
   letter-spacing: 0.1rem;
 }
@@ -1156,7 +1155,6 @@ footer span:hover a:after, footer span:focus a:after {
   position: relative;
   left: calc(-100vw * 0.08);
   width: 130%;
-  /*Is there a better way to do this*/
   top: -20px;
 }
 
@@ -1356,7 +1354,8 @@ footer span:hover a:after, footer span:focus a:after {
 .contact main .form-container {
   width: 65%;
   z-index: 1;
-  background-color: #FDD908;
+  -webkit-box-shadow: 15px 15px 0px 0px #FDD908;
+          box-shadow: 15px 15px 0px 0px #FDD908;
   margin-top: -100px;
   margin-bottom: 10%;
 }
@@ -1365,31 +1364,23 @@ footer span:hover a:after, footer span:focus a:after {
   .contact main .form-container {
     width: 100%;
     margin-top: 10%;
+    -webkit-box-shadow: 10px 10px 0px 0px #FDD908;
+            box-shadow: 10px 10px 0px 0px #FDD908;
   }
 }
 
-.contact main .form-container form {
+.contact main form {
   background-color: #0D457F;
   padding: 80px 20px 20px 20px;
-  position: relative;
-  top: -20px;
-  left: -20px;
-}
-
-@media (max-width: 800px) {
-  .contact main .form-container form {
-    position: initial;
-  }
 }
 
 @media (max-width: 450px) {
-  .contact main .form-container form .form-group {
+  .contact main .form-group {
     display: block;
   }
 }
 
-.contact main .form-container form .form-group input[type=text],
-.contact main .form-container form .form-group textarea {
+.contact main .form-group input[type=text], .contact main .form-group textarea {
   background-color: #0D457F;
   color: white;
 }

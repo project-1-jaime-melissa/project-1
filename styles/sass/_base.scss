@@ -166,7 +166,6 @@ nav {
             right: 0;
         }
     }
-    
 }
 
 .home, .contact {
@@ -178,8 +177,7 @@ nav {
 }
 
 form {
-    input[type=text],
-    textarea {
+    input[type=text], textarea {
         font-family: $font-body;
         letter-spacing: 0.1rem;
     }

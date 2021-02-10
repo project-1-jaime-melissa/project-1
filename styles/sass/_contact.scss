@@ -22,7 +22,6 @@
             }
         }
     
-
         /*Aside*/
         aside {
             width: 35%;
@@ -86,8 +85,6 @@
                     p:nth-child(1) {
                         margin-bottom: 0;
                     }
-
-
                 }
             }
         }    
@@ -96,7 +93,8 @@
             width: 65%;
             z-index: 1;
 
-            background-color: $color-yellow;
+            // background-color: $color-yellow;
+            @include box-shadow-right;
             margin-top: -100px;
             margin-bottom: 10%;
 
@@ -104,38 +102,36 @@
                 & {
                     width: 100%;
                     margin-top: 10%;
+                    @include box-shadow-right-small;
+                }
+            }
+        }
+            
+        form {
+            background-color: $color-dark-blue;
+            padding: 80px 20px 20px 20px;
+            
+            // position: relative;
+            // top: -20px;
+            // left: -20px;
+
+            // @include tablet-MQ {
+            //     & {
+            //         position: initial;
+            //     }
+            // }
+        }
+
+        .form-group {
+            @include small-phone-MQ {
+                & {
+                    display: block;
                 }
             }
             
-            form {
+            input[type=text], textarea {
                 background-color: $color-dark-blue;
-                padding: 80px 20px 20px 20px;
-                
-                position: relative;
-                top: -20px;
-                left: -20px;
-
-                @include tablet-MQ {
-                    & {
-                        position: initial;
-                    }
-                } 
-
-
-                .form-group {
-
-                    @include small-phone-MQ {
-                        & {
-                            display: block;
-                        }
-                    }
-                    
-                    input[type=text],
-                    textarea {
-                        background-color: $color-dark-blue;
-                        color: $color-white; 
-                    }
-                }
+                color: $color-white; 
             }
         }
     }    
