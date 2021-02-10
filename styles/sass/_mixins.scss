@@ -35,6 +35,30 @@
     box-shadow: -10px 10px 0px 0px $color-yellow;
 }
 
+//animated underline on hover
+@mixin animated-underline($color, $el: 'li') {
+    a {
+        position: relative;
+    }
+    
+    a:after {
+        content: '';
+        height: 2px;
+        position: absolute;
+        bottom: -5px;
+        background: $color; 
+        width: 0;
+        left: 50%;
+        transition: width 0.3s, left 0.3s;
+    }
+    
+    #{$el}:hover a:after, #{$el}:focus a:after {
+        width: 100%;
+        left: 0;
+    }
+
+}
+
 //calculate font size & line-height, courtesy of (with modifications): https://css-tricks.com/snippets/css/fluid-typography/
 @function strip-unit($value) {
     @return $value / ($value * 0 + 1);
