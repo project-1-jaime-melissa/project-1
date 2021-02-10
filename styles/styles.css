@@ -1146,6 +1146,16 @@ footer span:hover a:after, footer span:focus a:after {
   margin-bottom: 20px;
 }
 
+@media (max-width: 800px) {
+  .blog .blog-container {
+    margin: 0;
+  }
+  .blog .blog-container .image-container img {
+    top: 0;
+    right: 0;
+  }
+}
+
 .blog aside {
   width: calc(35% - 160px);
   background-color: #0D457F;
@@ -1178,6 +1188,18 @@ footer span:hover a:after, footer span:focus a:after {
 
 .blog aside .text-container ul li {
   list-style: inside;
+}
+
+@media (max-width: 800px) {
+  .blog aside {
+    padding: 2%;
+  }
+  .blog aside .image-container {
+    display: none;
+  }
+  .blog aside .text-container {
+    text-align: center;
+  }
 }
 
 .blog .comments-container {
