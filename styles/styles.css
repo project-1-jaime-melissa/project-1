@@ -478,7 +478,7 @@ nav .fa-bars {
   margin-left: auto;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 450px) {
   nav {
     /* hamburger menu */
   }
@@ -692,7 +692,7 @@ footer span:hover a:after, footer span:focus a:after {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 450px) {
   .home header h1 {
     width: 100%;
   }
@@ -1045,7 +1045,7 @@ footer span:hover a:after, footer span:focus a:after {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 450px) {
   .home .gallery li {
     width: 100%;
   }
@@ -1183,16 +1183,10 @@ footer span:hover a:after, footer span:focus a:after {
   color: #000000;
 }
 
-<<<<<<< HEAD
 @media (max-width: 800px) {
   .blog .blog-container, .blog .comments-container, .blog aside {
     width: 100%;
   }
-=======
-.blog form .form-group input[type=submit] {
-  background-color: #0D457F;
-  color: #FDD908;
->>>>>>> 77f7374e4868357063d165027becec3e88198ba4
 }
 
 .contact {
@@ -1349,7 +1343,7 @@ footer span:hover a:after, footer span:focus a:after {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 450px) {
   .contact main .form-container form .form-group {
     display: block;
   }
