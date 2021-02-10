@@ -108,6 +108,7 @@
 }
 
 //media queries
+
 @mixin laptop-MQ {
     @media (max-width: 992px) {
         @content;
@@ -126,7 +127,11 @@
     }
 }
 
+<<<<<<< HEAD
 @mixin small-phone-MQ {
+=======
+@mixin xs-phone-MQ {
+>>>>>>> 77f7374e4868357063d165027becec3e88198ba4
     @media (max-width: 450px) {
         @content;
     }

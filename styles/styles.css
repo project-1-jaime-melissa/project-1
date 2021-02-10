@@ -478,7 +478,7 @@ nav .fa-bars {
   margin-left: auto;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 600px) {
   nav {
     /* hamburger menu */
   }
@@ -692,7 +692,7 @@ footer span:hover a:after, footer span:focus a:after {
   }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 600px) {
   .home header h1 {
     width: 100%;
   }
@@ -1045,7 +1045,7 @@ footer span:hover a:after, footer span:focus a:after {
   }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 600px) {
   .home .gallery li {
     width: 100%;
   }
@@ -1110,8 +1110,6 @@ footer span:hover a:after, footer span:focus a:after {
   width: calc(35% - 160px);
   background-color: #0D457F;
   height: 100%;
-  position: relative;
-  top: 100px;
 }
 
 .blog aside .image-container {
@@ -1185,10 +1183,16 @@ footer span:hover a:after, footer span:focus a:after {
   color: #000000;
 }
 
+<<<<<<< HEAD
 @media (max-width: 800px) {
   .blog .blog-container, .blog .comments-container, .blog aside {
     width: 100%;
   }
+=======
+.blog form .form-group input[type=submit] {
+  background-color: #0D457F;
+  color: #FDD908;
+>>>>>>> 77f7374e4868357063d165027becec3e88198ba4
 }
 
 .contact {
@@ -1262,6 +1266,7 @@ footer span:hover a:after, footer span:focus a:after {
   .contact main aside .social-media {
     width: 50%;
     font-size: 2.4rem;
+    margin: 0 auto;
   }
 }
 
@@ -1290,6 +1295,31 @@ footer span:hover a:after, footer span:focus a:after {
   margin-top: 5%;
 }
 
+.contact main aside .text-container p:nth-child(1) {
+  margin-bottom: 5%;
+}
+
+@media (max-width: 800px) {
+  .contact main aside .text-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 5%;
+  }
+  .contact main aside .text-container p:nth-child(1) {
+    margin-bottom: 0;
+  }
+}
+
 .contact main .form-container {
   width: 65%;
   z-index: 1;
@@ -1301,6 +1331,7 @@ footer span:hover a:after, footer span:focus a:after {
 @media (max-width: 800px) {
   .contact main .form-container {
     width: 100%;
+    margin-top: 10%;
   }
 }
 
@@ -1310,6 +1341,18 @@ footer span:hover a:after, footer span:focus a:after {
   position: relative;
   top: -20px;
   left: -20px;
+}
+
+@media (max-width: 800px) {
+  .contact main .form-container form {
+    position: initial;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact main .form-container form .form-group {
+    display: block;
+  }
 }
 
 .contact main .form-container form .form-group input[type=text],

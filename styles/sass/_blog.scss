@@ -38,7 +38,7 @@
         .text-container {
             padding: 50px 75px 50px 100px;
             border-left: 2px solid $color-yellow;
-        border-bottom: 2px solid $color-yellow;
+            border-bottom: 2px solid $color-yellow;
 
             p {
                 margin-bottom: 20px;
@@ -50,8 +50,6 @@
         width: calc(35% - 160px); 
         background-color: $color-dark-blue;
         height: 100%;
-        position: relative;
-        top: 100px;
 
         .image-container {
             position: relative;
