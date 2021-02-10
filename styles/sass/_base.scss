@@ -151,7 +151,7 @@ nav {
             position: fixed;
             top: 15px;
             right: 0;
-            padding: 10px;
+            padding-top: 10px;
             margin-right: 20px;
             color: white;
             z-index: 10;
@@ -198,8 +198,7 @@ form {
         justify-content: space-between;
         margin-bottom: 6%;
 
-        input[type=text],
-        textarea {
+        input[type=text], textarea {
             padding: 4%;
         }
         
@@ -221,6 +220,17 @@ form {
 
         input[type=submit] {
             height: 50px;
+        }
+    }
+
+    //dropping name/email to one column
+    @include tablet-MQ {
+        & .name-email {
+            @include flex-wrap;
+    
+                input[type="text"] {
+                    width: 100%;
+                }
         }
     }
 }

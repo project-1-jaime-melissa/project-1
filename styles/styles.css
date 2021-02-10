@@ -516,7 +516,7 @@ nav .fa-bars {
     position: fixed;
     top: 15px;
     right: 0;
-    padding: 10px;
+    padding-top: 10px;
     margin-right: 20px;
     color: white;
     z-index: 10;
@@ -615,8 +615,7 @@ form .form-group {
   margin-bottom: 6%;
 }
 
-form .form-group input[type=text],
-form .form-group textarea {
+form .form-group input[type=text], form .form-group textarea {
   padding: 4%;
 }
 
@@ -638,6 +637,19 @@ form .form-group textarea {
 
 form .form-group input[type=submit] {
   height: 50px;
+}
+
+@media (max-width: 800px) {
+  form .name-email {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  form .name-email input[type="text"] {
+    width: 100%;
+  }
 }
 
 footer {
@@ -677,16 +689,23 @@ footer span:hover a:after, footer span:focus a:after {
 
 .home header {
   background-image: url(./../assets/home-header.jpg);
+  height: 75vh;
+}
+
+@media (max-width: 800px) {
+  .home header {
+    height: 40vh;
+  }
 }
 
 .home header h1 {
   color: #FDD908;
-  margin-top: 55vh;
+  margin-top: 35vh;
 }
 
 @media (max-width: 800px) {
   .home header h1 {
-    margin-top: 15vh;
+    margin-top: 8vh;
     width: 80%;
     text-align: right;
   }
@@ -717,7 +736,7 @@ footer span:hover a:after, footer span:focus a:after {
 .home header .image-container {
   width: 50%;
   position: absolute;
-  bottom: -180px;
+  bottom: -25vh;
   right: 0;
 }
 
@@ -888,14 +907,24 @@ footer span:hover a:after, footer span:focus a:after {
   padding-left: 100px;
 }
 
+@media (max-width: 992px) {
+  .home .programs-locations .programs-container .text-container {
+    padding-left: 50px;
+  }
+}
+
 @media (max-width: 800px) {
   .home .programs-locations .programs-container .text-container {
     padding-left: 0;
   }
 }
 
+.home .programs-locations .locations-container {
+  padding-bottom: 30px;
+}
+
 .home .programs-locations .locations-container .image-container {
-  bottom: -30px;
+  bottom: -50px;
   right: calc(-100vw * 0.08);
 }
 
@@ -918,6 +947,12 @@ footer span:hover a:after, footer span:focus a:after {
 
 .home .programs-locations .locations-container .text-container p {
   text-align: left;
+}
+
+@media (max-width: 992px) {
+  .home .programs-locations .locations-container .text-container {
+    padding-right: 50px;
+  }
 }
 
 @media (max-width: 800px) {
@@ -947,12 +982,18 @@ footer span:hover a:after, footer span:focus a:after {
   margin-bottom: 30px;
 }
 
+@media (max-width: 992px) {
+  .home .vacation-days .text-container {
+    padding: 0 0 60px;
+  }
+}
+
 @media (max-width: 800px) {
   .home .vacation-days p {
     text-align: center;
   }
   .home .vacation-days .text-container {
-    padding: 20px 0 40px;
+    padding: 30px 0 60px;
   }
 }
 
@@ -985,7 +1026,7 @@ footer span:hover a:after, footer span:focus a:after {
 .home .contest .text-container {
   width: 65%;
   height: 100%;
-  padding-left: 5%;
+  padding: 30px 0 40px 30px;
   margin: 0 auto;
 }
 
@@ -995,8 +1036,7 @@ footer span:hover a:after, footer span:focus a:after {
   }
   .home .contest .text-container {
     text-align: center;
-    padding: 0;
-    padding-top: 20px;
+    padding: 30px 0 10px;
   }
   .home .contest .image-container {
     display: none;
@@ -1006,7 +1046,7 @@ footer span:hover a:after, footer span:focus a:after {
 .home .gallery {
   background-color: #0D457F;
   margin-top: 20px;
-  padding: 35px 0;
+  padding: 50px 0;
 }
 
 @media (max-width: 800px) {
@@ -1177,8 +1217,7 @@ footer span:hover a:after, footer span:focus a:after {
   margin-top: 80px;
 }
 
-.blog form .form-group input[type=text],
-.blog form .form-group textarea {
+.blog form .form-group input[type=text], .blog form .form-group textarea {
   background-color: #EAFEFC;
   color: #000000;
 }
@@ -1352,5 +1391,5 @@ footer span:hover a:after, footer span:focus a:after {
 .contact main .form-container form .form-group input[type=text],
 .contact main .form-container form .form-group textarea {
   background-color: #0D457F;
-  color: #FFFFFF;
+  color: white;
 }
