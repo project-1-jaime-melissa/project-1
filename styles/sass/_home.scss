@@ -3,14 +3,22 @@
     
     header {
         background-image: url(./../assets/home-header.jpg);
+        height: 75vh; //overwrite base style
+
+        //reduce header size
+        @include tablet-MQ {
+            & {
+                height: 40vh;
+            }
+        }
         
         h1 {
             color: $color-yellow;
-            margin-top: 55vh;
+            margin-top: 35vh;
 
             @include tablet-MQ {
                 & {
-                    margin-top: 15vh;
+                    margin-top: 8vh;
                     width: 80%;
                     text-align: right;
                 }
@@ -35,7 +43,7 @@
         .image-container {
             width: 50%;
             position: absolute;
-            bottom: -180px;
+            bottom: -25vh;
             right: 0;
 
             //hide header image

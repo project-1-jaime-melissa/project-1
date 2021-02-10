@@ -11,19 +11,16 @@
     }
 
     main {
-        display: flex;
-        flex-wrap: wrap; // *** added wrap (can replace this and above with @include flex-wrap mixin
+        @include flex-wrap;
         justify-content: flex-end; 
         
     }
 
     .blog-container {
         width: 65%;
-        
         position: relative;
         margin-top: -100px;
         
-
         .image-container {
             background: $color-yellow;
 
@@ -31,7 +28,6 @@
                 position: relative;
                 top: -20px;
                 right: -20px;
-                // @include wrapper-margin(right, 0.03);
             }
         }
 
@@ -104,31 +100,20 @@
     }
 
     form {
-
         margin-top: 80px;
 
         .form-group {
-            input[type=text],
-            textarea {
+            input[type=text], textarea {
                 background-color: $color-light-blue;
                 color: #000000;
             }
-
-            //**** added button format mixin
-            // input[type=submit] {
-            //     background-color: $color-dark-blue;
-            //     color: $color-yellow;
-            // }
         }
-
-
     }
-
-    //*** added below...but think it needs to wrap sooner or maybe we can reduce padding at a larger breakpoint and then drop to one column around tablet size?
+    
+    //updating width to 100%
     @include tablet-MQ {
-        .blog-container, .comments-container, aside {
+        & .blog-container, & .comments-container, & aside {
             width: 100%;
         }
     }
-
 }
