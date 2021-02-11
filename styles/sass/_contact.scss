@@ -1,5 +1,5 @@
 .contact {
-    /*Header*/
+    //|||| HEADER ||||
     header {
         background-image: url(./../assets/contact-header.jpg);
 
@@ -10,9 +10,11 @@
         }
     }
 
-    /*Main*/
+    //|||| MAIN ||||
     main {
         display: flex;
+
+        //re-arranges order
         @include tablet-MQ {
             & {
                 flex-direction: column;
@@ -22,18 +24,20 @@
             }
         }
     
-        /*Aside*/
+        //|||| ASIDE ||||
         aside {
             width: 35%;
             margin-top: 10%;
             padding-left: 4%;
 
+            //resets padding
             @include laptop-MQ {
                 & {
                     padding-left: 0;
                 }
             }
 
+            //resets margin, adjusts width, reorders elements
             @include tablet-MQ {
                 & {
                     margin: 0;
@@ -46,10 +50,10 @@
                 width: 30%;
                 margin-bottom: 1%;
 
+                //adjusts width and centers
                 @include tablet-MQ {
                     & {
                         width: 50%;
-                        font-size: 2.4rem;
                         margin: 0 auto;
                     }
                 }
@@ -58,24 +62,28 @@
                     display: flex;
                     justify-content: space-between;
                     
+                    a {
+                        color: $color-dark-blue;
+                    }
+
+                    //adjusts spacing
                     @include tablet-MQ {
                         & {
                             justify-content: space-evenly;
                         }
-                    }
-
-                    a {
-                        color: $color-dark-blue;
                     }
                 }
             }
 
             .text-container {
                 margin-top: 5%;
+
+                //add spacing below
                 p:nth-child(1) {
                     margin-bottom: 5%;
                 }
 
+                //changes to vertical design and centers
                 @include tablet-MQ {
                     @include flex-wrap;
                     flex-direction: column;
@@ -89,15 +97,17 @@
             }
         }    
 
+        //|||| FORM |||||
         .form-container {
             width: 65%;
             z-index: 1;
 
-            // background-color: $color-yellow;
+            //box-shadow effect
             @include box-shadow-right;
             margin-top: -100px;
             margin-bottom: 10%;
 
+            //reduces box-shadow, adjusts width and margin
             @include tablet-MQ {
                 & {
                     width: 100%;
@@ -105,23 +115,21 @@
                     @include box-shadow-right-small;
                 }
             }
+
+            //removes box shadow
+            @include large-phone-MQ {
+                & {
+                    @include remove-box-shadow;
+                }
+            }
         }
             
         form {
             background-color: $color-dark-blue;
             padding: 80px 20px 20px 20px;
-            
-            // position: relative;
-            // top: -20px;
-            // left: -20px;
-
-            // @include tablet-MQ {
-            //     & {
-            //         position: initial;
-            //     }
-            // }
         }
 
+        
         .form-group {
             @include small-phone-MQ {
                 & {

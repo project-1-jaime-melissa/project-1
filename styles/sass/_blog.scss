@@ -1,5 +1,6 @@
 .blog { 
     
+    //|||| HEADER ||||
     header {
         background-image: url("./../assets/blog-header.jpg");
 
@@ -10,20 +11,24 @@
         }
     }
 
+    //|||| MAIN ||||
     main {
         @include flex-wrap;
         justify-content: flex-end; 
     }
 
+    //|||| BLOG POST SECTION ||||
     .blog-container {
         width: 65%;
         position: relative;
+        //overlap effect
         margin-top: -100px;
         
         .image-container {
             background: $color-yellow;
 
             img {
+                //box shadow effect
                 position: relative;
                 top: -20px;
                 right: -20px;
@@ -40,6 +45,7 @@
             }
         }
 
+        //remove box shadow effect, adjust margin and padding, add border
         @include tablet-MQ {
             & {
                 margin: 0;
@@ -50,19 +56,37 @@
                         right: 0 ;
                     }
                 }
+                .text-container {
+                    margin: 5%;
+                    padding: 5%;
+                    border: 2px solid $color-yellow;
+                }
+            }
+        }
+
+        //remove border
+        @include large-phone-MQ {
+            & {
+                .text-container {
+                    border: none;
+                }
             }
         }
     }
 
+    //|||| ASIDE ||||
     aside {
         width: calc(35% - 160px); 
         background-color: $color-dark-blue;
         height: 100%;
+        position: relative;
+        top: 100px;
 
         .image-container {
             position: relative;
+            //box shadow effect
             @include wrapper-margin(left, 0.08);
-            width: 130%;
+            width: 130%; 
             top: -20px;
         }
 
@@ -84,25 +108,66 @@
             ul li {
                 list-style: inside;
             }
+            
+            a {
+                color: $color-white;
+                text-decoration: none;
+            }
+        }
+        
+        //adjust width
+        @include laptop-MQ {
+            & {
+                width: calc(35% - 80px);
+            }
+        }
 
-            @include tablet-MQ {
-                & {
-                    background-color: $color-light-blue;
+        //adjust width & image
+        @include laptop-MQ {
+            & {
+                width: calc(35% - 90px);
+
+                .image-container {
+                    width: 120%;
                 }
             }
         }
 
+        //changes design layout, adjusts position, padding
         @include tablet-MQ {
             & {
-
+                top: 0;
                 padding: 2%;
 
+                display: flex;
+                    justify-content: space-between;
+                    text-align: center;
+
                 .image-container {
-                    display: none;
+                    width: 60%;
+                    top: 0;
+                    left: 0;
+                    padding: 5%;
                 }
 
                 .text-container {
-                    text-align: center;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    padding: 3%;
+                }
+            }
+        }
+
+        //removes image and changes design vertically
+        @include large-phone-MQ {
+            & {
+                .text-container {
+                    flex-direction: column;
+                }
+
+                .image-container {
+                    display: none;
                 }
             }
         }
@@ -110,7 +175,7 @@
 
     .comments-container {
         width: 65%;
-        padding: 50px 75px 50px 100px;
+        padding: 5%;
         
         .comments {
             display: flex;
@@ -128,6 +193,19 @@
 
             .image-container {
                 width: 50%;
+            }
+        }
+
+        //removes images, adjusts spacing
+        @include small-phone-MQ {
+            & {
+                .image-container {
+                    display: none;
+                }
+
+                .comments {
+                    justify-content: space-around;
+                }
             }
         }
     }

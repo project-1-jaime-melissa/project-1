@@ -17,6 +17,7 @@
 </head>
 
 <body class="blog">
+    <!--Header-->
     <header>
         <nav class="wrapper">
             <label for="toggle" class="mobile-menu">
@@ -35,30 +36,37 @@
         </div>
     </header>
 
+    <!--Main-->
     <main>
+        <!--Aside-->
         <aside class="wrapper"> 
             <div class="image-container">
-                <img src="./assets/blog-side-image.jpg" alt="">
+                <img src="./assets/blog-side-image.jpg" alt="view of dock on boat with sun setting">
             </div>
             <div class="text-container wrapper">
-                <h4>Our Mission</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores commodi tempore id! Find out
-                    more.</p>
-                <h4>Recent Posts</h4>
-                <ul>
-                    <li>Lorem ipsum dolor sit.</li>
-                    <li>Lorem ipsum dolor sit.</li>
-                    <li>Lorem ipsum dolor sit.</li>
-                    <li>Lorem ipsum dolor sit.</li>
-                </ul>
+                <div class="our-mission">
+                    <h4>Our Mission</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores commodi tempore id! Find out
+                        more.</p>
+                </div>
+                <div class="recent-blogs">
+                    <h4>Recent Posts</h4>
+                    <ul>
+                        <li><a href="#">Lorem ipsum dolor sit.</a></li>
+                        <li><a href="#">Lorem ipsum dolor sit.</a></li>
+                        <li><a href="#">Lorem ipsum dolor sit.</a></li>
+                        <li><a href="#">Lorem ipsum dolor sit.</a></li>
+                    </ul>
+                </div>
             </div>
         </aside>
 
-        <section class="blog-container"> <!--Removed wrapper for now-->
+        <!--Blog Section-->
+        <section class="blog-container">
             <div class="image-container">
-                <img src="./assets/blog-post-image.jpg" alt="">
+                <img src="./assets/blog-post-image.jpg" alt="blue boat docked floating on water">
             </div>
-            <div class="text-container">
+            <div class="text-container wrapper">
                 <h3>Next Destination</h3>
                 <p>Monday October 30, 2019 by Sulaire</p>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente rerum delectus officiis
@@ -91,7 +99,8 @@
             </div>
         </section>
 
-        <section class="comments-container">
+        <!--Comments Section-->
+        <section class="comments-container wrapper">
             <h3>Comments</h3>
             <div class="comments">
                 
@@ -114,6 +123,8 @@
                     </div>
                 </div>
             </div>
+
+            <!--Form-->
             <div class="form-container">
                 <form action="">
                     <fieldset>
@@ -135,6 +146,7 @@
         </section>
     </main>
 
+    <!--Footer-->
     <footer>
         <p>Copyright © 2019 <span><a href="https://junocollege.com" target="_blank">Juno College</a></span></p>
     </footer>
