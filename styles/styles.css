@@ -221,7 +221,6 @@ textarea {
   overflow: hidden;
 }
 
-/*Dark Blue: # */
 html {
   font-size: 62.5%;
 }
@@ -1139,7 +1138,7 @@ footer span:hover a:after, footer span:focus a:after {
 .blog .blog-container {
   width: 65%;
   position: relative;
-  margin-top: -25vh;
+  margin-top: -20vh;
 }
 
 .blog .blog-container .image-container {
