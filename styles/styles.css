@@ -1139,7 +1139,7 @@ footer span:hover a:after, footer span:focus a:after {
 .blog .blog-container {
   width: 65%;
   position: relative;
-  margin-top: -100px;
+  margin-top: -25vh;
 }
 
 .blog .blog-container .image-container {
@@ -1467,7 +1467,7 @@ footer span:hover a:after, footer span:focus a:after {
   z-index: 1;
   -webkit-box-shadow: 15px 15px 0px 0px #FDD908;
           box-shadow: 15px 15px 0px 0px #FDD908;
-  margin-top: -100px;
+  margin-top: -25vh;
   margin-bottom: 10%;
 }
 
