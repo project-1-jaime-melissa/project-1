@@ -1285,6 +1285,7 @@ footer span:hover a:after, footer span:focus a:after {
 .blog .comments-container {
   width: 65%;
   padding: 5%;
+  margin: unset;
 }
 
 .blog .comments-container .comments {
