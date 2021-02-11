@@ -212,6 +212,13 @@
                         @include box-shadow-right-small;
                     }
                 }
+
+                //removes box shadow
+                @include large-phone-MQ {
+                    & {
+                        @include remove-box-shadow;
+                    }
+                }
             }
 
             .text-container {
@@ -246,6 +253,13 @@
                 @include tablet-MQ {
                     & {
                         @include box-shadow-left-small;
+                    }
+                }
+
+                //removes box shadow
+                @include large-phone-MQ {
+                    & {
+                        @include remove-box-shadow;
                     }
                 }
             }

@@ -173,6 +173,7 @@
         }
     }
 
+    //|||| COMMENTS SECTION ||||
     .comments-container {
         width: 65%;
         padding: 5%;
@@ -188,7 +189,7 @@
             display: flex;
 
             .text-container {
-                padding: 0 4%;
+                padding: 0 5%;
             }
 
             .image-container {
@@ -205,6 +206,10 @@
 
                 .comments {
                     justify-content: space-around;
+                }
+
+                h3 {
+                    padding-left: 5%;
                 }
             }
         }
