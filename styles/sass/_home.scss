@@ -374,6 +374,7 @@
         background-color: $color-dark-blue;
         margin-top: 20px;
         padding: 50px 0;
+        position: relative;
 
         @include tablet-MQ {
             & {
@@ -382,43 +383,62 @@
         }
         
         .image-container {
-            margin: 0 auto;
             @include flex-wrap;
+            justify-content: center;
         }
 
         li {
-            width: calc((100% - 40px) / 3);
+            width: calc((80% - 40px) / 2);
             margin-right: 20px;  
-        }
 
-        li:nth-of-type(3n) {
-            margin-right: 0;
-        }
+            &:nth-of-type(2n) {
+                margin-right: 0;
+            }
         
-        //hide the 3rd image
-        @include tablet-MQ {
-            li {
-                width: calc((100% - 20px) / 2);
-            }
+            //hide the 2nd image
+            @include large-phone-MQ {
+                & {
+                    width: calc((70% - 20px));
+                    margin-right: 0;
+                
 
-            li:nth-of-type(2n) {
-                margin-right: 0;
-            }
-            
-            li:nth-of-type(3n) {
-                display: none;
+                    &:nth-of-type(2n) {
+                        display: none;
+                    }
+                }
             }
         }
 
-        //wrap images to one column
-        @include small-phone-MQ {
-            li {
-                width: 100%;
+        //carrosel arrows
+        .arrows {
+            position: initial;
+
+            i.fas {
+                position: absolute;
+                top: calc(50% - 3.5rem);
+                font-size: 5rem;
+                z-index: 10;
+                color: $color-yellow;
+
+                //reduce icon size
+                @include small-phone-MQ {
+                    & {
+                        font-size: 4rem;
+                        top: calc(50% - 2rem);
+                    }
+                }
             }
 
-            li:nth-of-type(1n) {
-                margin-right: 0;
-                margin-bottom: 20px;
+            .fa-chevron-circle-left {
+                left: 5vw;
+            }
+
+            .fa-chevron-circle-right {
+                right: 5vw;
+            }
+
+            i.fas:hover, i.fas:focus {
+                color: $color-light-blue;
             }
         }
     }

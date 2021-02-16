@@ -193,32 +193,9 @@ textarea {
   padding: .2em 0;
 }
 
-.clearfix:after {
-  visibility: hidden;
-  display: block;
-  font-size: 0;
-  content: '';
-  clear: both;
-  height: 0;
-}
-
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-}
-
-.visuallyHidden:not(:focus):not(:active) {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  -webkit-clip-path: inset(100%);
-          clip-path: inset(100%);
-  clip: rect(0 0 0);
-  overflow: hidden;
 }
 
 html {
@@ -1111,6 +1088,7 @@ footer span:hover a:after, footer span:focus a:after {
   background-color: #0D457F;
   margin-top: 20px;
   padding: 50px 0;
+  position: relative;
 }
 
 @media (max-width: 800px) {
@@ -1120,43 +1098,64 @@ footer span:hover a:after, footer span:focus a:after {
 }
 
 .home .gallery .image-container {
-  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .home .gallery li {
-  width: calc((100% - 40px) / 3);
+  width: calc((80% - 40px) / 2);
   margin-right: 20px;
 }
 
-.home .gallery li:nth-of-type(3n) {
+.home .gallery li:nth-of-type(2n) {
   margin-right: 0;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 600px) {
   .home .gallery li {
-    width: calc((100% - 20px) / 2);
-  }
-  .home .gallery li:nth-of-type(2n) {
+    width: calc((70% - 20px));
     margin-right: 0;
   }
-  .home .gallery li:nth-of-type(3n) {
+  .home .gallery li:nth-of-type(2n) {
     display: none;
   }
 }
 
+.home .gallery .arrows {
+  position: initial;
+}
+
+.home .gallery .arrows i.fas {
+  position: absolute;
+  top: calc(50% - 3.5rem);
+  font-size: 5rem;
+  z-index: 10;
+  color: #FDD908;
+}
+
 @media (max-width: 450px) {
-  .home .gallery li {
-    width: 100%;
+  .home .gallery .arrows i.fas {
+    font-size: 4rem;
+    top: calc(50% - 2rem);
   }
-  .home .gallery li:nth-of-type(1n) {
-    margin-right: 0;
-    margin-bottom: 20px;
-  }
+}
+
+.home .gallery .arrows .fa-chevron-circle-left {
+  left: 5vw;
+}
+
+.home .gallery .arrows .fa-chevron-circle-right {
+  right: 5vw;
+}
+
+.home .gallery .arrows i.fas:hover, .home .gallery .arrows i.fas:focus {
+  color: #EAFEFC;
 }
 
 .blog header {
