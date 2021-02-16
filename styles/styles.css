@@ -276,6 +276,7 @@ h1, h2, h3, h4, .button, input[type=submit] {
   text-transform: uppercase;
   font-family: "IM Fell English", serif;
   font-style: italic;
+  cursor: pointer;
 }
 
 h1 {
@@ -684,6 +685,54 @@ footer a:after {
 footer span:hover a:after, footer span:focus a:after {
   width: 100%;
   left: 0;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(13, 68, 127, 0.75);
+  margin: auto auto;
+}
+
+.modal p, .modal h3 {
+  color: #0D457F !important;
+}
+
+.modal-content {
+  background-color: #EAFEFC;
+  margin: 10% auto;
+  padding: 20px;
+  border: 10px solid #FDD908;
+  width: 80%;
+}
+
+@media (max-width: 800px) {
+  .modal-content {
+    padding: 10px;
+    width: 90%;
+    margin: 5% auto;
+  }
+}
+
+/* modal close button */
+.modal-close {
+  color: #0D457F;
+  float: right;
+  font-size: 50px;
+  font-weight: 700;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+  cursor: pointer;
+}
+
+.modal-close:hover, .modal-close:focus {
+  color: #FDD908;
 }
 
 .home header {

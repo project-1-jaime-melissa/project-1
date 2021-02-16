@@ -35,6 +35,7 @@ h1, h2, h3, h4, .button, input[type=submit] {
     text-transform: uppercase;
     font-family: $font-headers;
     font-style: italic;
+    cursor: pointer;
 }
 
 h1 {
@@ -247,4 +248,54 @@ footer {
 
     //animated underline on hover
     @include animated-underline($color-dark-blue, 'span');
+}
+
+//modal background
+.modal {
+    display: none; //hidden by default
+    position: fixed;
+    z-index: 10; //bring to front
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; //enable scroll if needed
+    background-color: $color-dark-blue-opacity;
+    margin: auto auto;
+
+    p, h3 {
+        color: $color-dark-blue !important;
+    }
+}
+
+//modal content
+.modal-content {
+    background-color: $color-light-blue;
+    margin: 10% auto; //10% from the top and centered
+    padding: 20px;
+    border: 10px solid $color-yellow;
+    width: 80%;
+
+    //increase width
+    @include tablet-MQ {
+        & {
+            padding: 10px;
+            width: 90%;
+            margin: 5% auto;
+        }
+    }
+}
+
+/* modal close button */
+.modal-close {
+    color: $color-dark-blue;;
+    float: right;
+    font-size: 50px;
+    font-weight: 700;
+    transition: color 0.3s;
+    cursor: pointer;
+}
+
+.modal-close:hover, .modal-close:focus {
+    color: $color-yellow;
 }
